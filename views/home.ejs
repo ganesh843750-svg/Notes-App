@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <section class="head">
+      <h1>Notes App</h1>
+      <button id="inst">Insert a Note</button>
+    </section>
+   
+    <section id="hero">
+        <% notes.forEach(note =>{ %>
+            <div class="card" data-id="<%= note._id %>">
+                 <h2><%= note.title %></h2>
+            <div class="dleupd">
+                <button class="dle" data-id="<%= note._id %>">Delete</button>
+                <button class="upd" data-id="<%= note._id %>">Update</button>
+            </div>
+               </div>
+<%        }) %>
+    </section>
+
+
+    <script src="./JS/home.js"></script> 
+</body>
+</html>
